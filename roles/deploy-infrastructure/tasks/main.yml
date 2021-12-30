@@ -1,0 +1,17 @@
+---
+# tasks file for deploy-infrastructure
+    - name: terraform init and plan
+      terraform:
+        project_path: '{{ project_path }}'
+        force_init: yes
+
+    - name: terraform apply
+      terraform:
+        project_path: '{{ project_path }}'
+        lock: true
+        state: present
+
+    - name: wait for servers to initialize
+      wait_for:
+        timeout: 60
+      delegate_to: localhost

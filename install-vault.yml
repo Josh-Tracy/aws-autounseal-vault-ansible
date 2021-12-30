@@ -1,0 +1,11 @@
+- hosts: vault_server
+  become: yes 
+
+  pre_tasks:
+    - name: Load the vars created by terrraform
+      include_vars:
+        dir: roles/install-vault/vars
+        files_matching: main.yaml
+
+  roles:
+    - install-vault 

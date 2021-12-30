@@ -1,0 +1,16 @@
+storage "file" {
+  path = "/opt/vault/data"
+}
+
+listener "tcp" {
+  address     = "0.0.0.0:8200"
+  tls_disable = 1
+}
+seal "awskms" {
+  region     = "us-east-1"
+  kms_key_id = "{{ tf_vault_kms_key }}"
+  secret_key = "{{ aws_secret_key }}"
+  access_key = "{{ aws_access_key }}"
+  
+}
+ui = true

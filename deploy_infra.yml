@@ -1,0 +1,6 @@
+- name: main
+  hosts: localhost
+  connection: local
+
+  roles:
+    - deploy-infrastructure

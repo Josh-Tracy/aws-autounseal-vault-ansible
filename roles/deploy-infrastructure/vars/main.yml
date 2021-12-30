@@ -1,0 +1,5 @@
+---
+# vars file for deploy-infrastructure
+
+# Path is relative to where you run deploy_and_install.yml playbook from
+project_path: terraform/
