@@ -1,3 +1,4 @@
+## Work In Progress
 # Hashicorp Vault AWS KMS Auto Unseal - Terraform Deploy and Ansible Install and Configure
 The goal of this repository is to demonstrate a workflow that uses terraform to deploy the infrastrcture and resources in AWS needed for Hashicorp's Vault. Ansible is then used to dynamically connect to the infrastructure and configure it for Vault auto unseal using AWS KMS. 
 
